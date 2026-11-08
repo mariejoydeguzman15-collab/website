@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marie Joy De Guzman — Information Technology Professional</title>
+<meta name="description" content="Resume portfolio of Marie Joy De Guzman — Information Technology Professional." />
+<link rel="icon" type="image/png" href="https://cdn.postimage.me/2026/10/13/image4e8579b946978c55.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root{
+  --paper:       #faf8f3;
+  --paper-2:     #f2efe8;
+  --paper-3:     #e9e5dc;
+  --ink:         #1c1917;
+  --ink-2:       #57534e;
+  --ink-3:       #79716b;
+  --ink-4:       #a8a29e;
+  --accent:      #d94a2b;
+  --accent-ink:  #ffffff;
+  --rule:        rgba(28,25,23,.09);
+  --rule-strong: rgba(28,25,23,.55);
+
+  --font-display:'Fraunces','Times New Roman',serif;
+  --font-body:   'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono:   'IBM Plex Mono',ui-monospace,'SF Mono',monospace;
+
+  --r-sm: 3px;
+  --r:    4px;
+  --r-md: 8px;
+
+  --container: 1200px;
+  --gutter:    40px;
+  --t:         .22s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --paper:       #1a1714;
+  --paper-2:     #22201c;
+  --paper-3:     #2b2823;
+  --ink:         #f5f1e8;
+  --ink-2:       #c9c2b6;
+  --ink-3:       #9a9288;
+  --ink-4:       #655d53;
+  --accent:      #ff5a3c;
+  --rule:        rgba(245,241,232,.10);
+  --rule-strong: rgba(245,241,232,.55);
+}
+
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:84px}
+body{
+  font-family:var(--font-body);
+  font-size:16px;line-height:1.6;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  transition:background var(--t),color var(--t);
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--accent);color:var(--paper)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+@media(max-width:720px){:root{--gutter:22px}}
+
+.mono{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.num{font-variant-numeric:tabular-nums}
+
+/* =========================================================
+   TOP BAR + NAVIGATION
+   ========================================================= */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--rule);
+  transition:background var(--t),border-color var(--t);
+}
+.topbar__inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;height:60px;position:relative;
+}
+.topbar__brand{
+  font-family:var(--font-mono);
+  font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;gap:12px;
+  flex-shrink:0;
+}
+/* Logo Image */
+.topbar__logo{
+  width:28px;height:28px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--rule);
+  background:var(--paper-2);
+  transition:transform var(--t);
+}
+.topbar__brand:hover .topbar__logo{
+  transform:scale(1.05);
+}
+.topbar__name{display:none;font-weight:400}
+@media(min-width:560px){.topbar__name{display:inline}}
+
+/* Nav */
+.nav{display:none}
+.nav__list{list-style:none;display:flex;align-items:center;gap:2px}
+.nav__link{
+  display:block;
+  padding:8px 9px;
+  border-radius:var(--r-sm);
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-2);
+  transition:color var(--t),background var(--t),border-color var(--t);
+  white-space:nowrap;
+}
+.nav__link:hover{color:var(--ink);background:var(--paper-2)}
+.nav__link.is-active{color:var(--accent)}
+.nav__link--cta{
+  color:var(--ink);
+  border:1px solid var(--ink);
+  margin-left:10px;
+  padding:7px 13px;
+}
+.nav__link--cta:hover{background:var(--ink);color:var(--paper)}
+.nav__link--cta.is-active{color:var(--accent);border-color:var(--accent);background:transparent}
+
+@media(min-width:1024px){
+  .nav{display:block;margin-left:auto}
+}
+
+/* Mobile nav panel */
+@media(max-width:1023px){
+  .nav{
+    position:absolute;left:calc(-1 * var(--gutter));right:calc(-1 * var(--gutter));top:100%;
+    display:none;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    box-shadow:0 22px 34px -26px rgba(0,0,0,.4);
+    padding:6px var(--gutter) 20px;
+    max-height:calc(100vh - 60px);
+    overflow-y:auto;
+  }
+  .nav.is-open{display:block;animation:navDrop .2s cubic-bezier(.22,1,.36,1)}
+  .nav__list{flex-direction:column;align-items:stretch;gap:0}
+  .nav__link{
+    padding:13px 2px;
+    border-bottom:1px solid var(--rule);
+    border-radius:0;
+    font-size:11px;
+    letter-spacing:.10em;
+  }
+  .nav__link--cta{
+    margin:16px 0 0;
+    text-align:center;
+    padding:12px;
+    border:1px solid var(--ink);
+  }
+}
+@keyframes navDrop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+.topbar__actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.topbar__toggle{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-2);
+  padding:6px 10px;
+  border-radius:var(--r-sm);
+  transition:color var(--t),background var(--t);
+}
+.topbar__toggle:hover{color:var(--ink);background:var(--paper-2)}
+.topbar__toggle-day{display:none}
+[data-theme="dark"] .topbar__toggle-day{display:inline}
+[data-theme="dark"] .topbar__toggle-night{display:none}
+
+.topbar__menu{
+  display:inline-flex;flex-direction:column;justify-content:center;gap:4px;
+  width:34px;height:34px;padding:0 8px;
+  border-radius:var(--r-sm);
+  transition:background var(--t);
+}
+.topbar__menu:hover{background:var(--paper-2)}
+.topbar__menu span{
+  display:block;width:100%;height:1.5px;
+  background:var(--ink);
+  border-radius:2px;
+  transition:transform var(--t),opacity var(--t);
+}
+.topbar__menu[aria-expanded="true"] span:first-child{transform:translateY(2.75px) rotate(45deg)}
+.topbar__menu[aria-expanded="true"] span:last-child{transform:translateY(-2.75px) rotate(-45deg)}
+@media(min-width:1024px){.topbar__menu{display:none}}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{padding:56px 0 0;border-bottom:1px solid var(--rule)}
+.hero__meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;
+  padding-bottom:26px;
+  font-family:var(--font-mono);font-size:11px;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.hero__meta-sep{color:var(--ink-4)}
+.hero__status{display:inline-flex;align-items:center;gap:8px;color:var(--ink)}
+.hero__status-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+  display:inline-block;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent);
+}
+.hero__grid{
+  display:grid;grid-template-columns:1fr;gap:44px;
+  padding:44px 0 60px;
+  align-items:start;
+}
+@media(min-width:900px){
+  .hero__grid{grid-template-columns:1.35fr 1fr;gap:60px}
+}
+.hero__name{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:clamp(2.6rem,6vw,4.8rem);
+  line-height:1.02;
+  letter-spacing:-.028em;
+  margin-bottom:22px;
+}
+.hero__name em{font-style:italic;color:var(--accent)}
+.hero__role{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.05rem,1.8vw,1.35rem);
+  color:var(--ink-2);
+  margin-bottom:30px;
+  line-height:1.4;
+  max-width:36ch;
+}
+.hero__cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 20px;
+  font-family:var(--font-mono);
+  font-size:11px;font-weight:500;
+  letter-spacing:.10em;text-transform:uppercase;
+  border:1px solid var(--ink);
+  border-radius:var(--r);
+  transition:background var(--t),color var(--t),border-color var(--t),transform var(--t);
+}
+.btn--primary{background:var(--ink);color:var(--paper)}
+.btn--primary:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-1px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--sm{padding:9px 14px;font-size:10px}
+
+.link-arrow{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.10em;text-transform:uppercase;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:3px;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:color var(--t),border-color var(--t);
+}
+.link-arrow:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* Portrait */
+.portrait{
+  display:grid;gap:12px;
+  padding-left:18px;
+  border-left:1px solid var(--accent);
+  max-width:400px;
+}
+.portrait__frame{
+  aspect-ratio:4/5;
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  overflow:hidden;
+  background:var(--paper-2);
+}
+.portrait__frame img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.22,1,.36,1);
+}
+.portrait:hover .portrait__frame img{transform:scale(1.02)}
+.portrait__caption{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+
+/* Hero footer strip */
+.hero__strip{
+  border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+.hero__strip > *{
+  padding:20px 0;
+  border-right:1px solid var(--rule);
+  padding-right:24px;
+}
+.hero__strip > *:not(:first-child){padding-left:24px}
+.hero__strip > *:last-child{border-right:none}
+@media(max-width:720px){
+  .hero__strip{grid-template-columns:1fr}
+  .hero__strip > *{border-right:none;border-bottom:1px solid var(--rule);padding-left:0!important}
+  .hero__strip > *:last-child{border-bottom:none}
+}
+.hero__strip-label{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:5px;
+}
+.hero__strip-value{
+  font-family:var(--font-mono);font-size:12.5px;
+  color:var(--ink);
+  word-break:break-word;
+}
+.hero__strip-value a{border-bottom:1px solid var(--rule);transition:border-color var(--t),color var(--t)}
+.hero__strip-value a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+.section{padding:80px 0;border-bottom:1px solid var(--rule)}
+.section:last-of-type{border-bottom:none}
+.section--alt{background:var(--paper-2)}
+
+.section__head{
+  display:flex;align-items:baseline;gap:12px;
+  margin-bottom:40px;
+}
+.section__num{
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.10em;
+  color:var(--accent);
+}
+.section__name{
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-2);
+}
+.section__line{
+  flex:1;height:1px;background:var(--rule);
+  transform:translateY(-3px);
+}
+.section__title{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:clamp(1.7rem,3.2vw,2.4rem);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin-bottom:14px;
+  max-width:22ch;
+}
+.section__title em{color:var(--accent)}
+.section__lead{
+  font-size:15.5px;line-height:1.7;
+  color:var(--ink-2);
+  max-width:62ch;
+  margin-bottom:48px;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about{
+  display:grid;grid-template-columns:1fr;gap:48px;
+}
+@media(min-width:900px){
+  .about{grid-template-columns:1.5fr 1fr;gap:64px}
+}
+.about__prose p{
+  font-size:15.5px;line-height:1.75;color:var(--ink-2);
+  margin-bottom:18px;
+  max-width:60ch;
+}
+.about__prose p:last-of-type{margin-bottom:0}
+.about__prose strong{color:var(--ink);font-weight:500}
+.about__socials{
+  display:flex;gap:22px;margin-top:26px;
+  padding-top:20px;border-top:1px solid var(--rule);
+}
+
+.facts{border-top:1px solid var(--ink)}
+.facts__row{
+  display:grid;grid-template-columns:100px 1fr;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+.facts__label{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.facts__value{
+  font-size:14px;line-height:1.55;color:var(--ink);
+}
+.facts__value strong{font-weight:500}
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+.skills{
+  display:grid;grid-template-columns:1fr;gap:48px;
+}
+@media(min-width:820px){.skills{grid-template-columns:1fr 1fr;gap:56px}}
+
+.skills__col-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--ink);
+}
+.skills__col-title{
+  font-family:var(--font-display);
+  font-size:1.2rem;font-weight:400;
+  letter-spacing:-.005em;
+}
+.skills__col-count{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;
+  color:var(--ink-3);
+}
+.ledger-list{list-style:none}
+.ledger-list li{
+  display:flex;align-items:baseline;gap:8px;
+  padding:11px 0;
+  border-bottom:1px solid var(--rule);
+  font-size:14px;
+}
+.ledger-list li span:first-child{white-space:nowrap}
+.ledger-list .leader{
+  flex:1;
+  border-bottom:1px dotted var(--ink-4);
+  transform:translateY(-3px);
+}
+.ledger-list .num{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
+  min-width:26px;text-align:right;
+  transition:color var(--t);
+}
+.ledger-list li:hover .num{color:var(--accent)}
+
+/* =========================================================
+   CERTIFICATES
+   ========================================================= */
+.cert-grid{
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr;
+  border-top:1px solid var(--rule);
+  border-left:1px solid var(--rule);
+  border-radius:var(--r-md);
+  overflow:hidden;
+}
+@media(min-width:600px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.cert-grid{grid-template-columns:repeat(3,1fr)}}
+.cert-grid > li{
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+  position:relative;
+  transition:background var(--t);
+}
+.cert-grid > li:hover{background:var(--paper-2)}
+[data-theme="dark"] .cert-grid > li:hover{background:var(--paper-3)}
+.cert{display:flex;flex-direction:column;height:100%}
+.cert__media{
+  aspect-ratio:16/10;
+  overflow:hidden;
+  border-bottom:1px solid var(--rule);
+  background:var(--paper-3);
+  position:relative;
+}
+.cert__media a{display:block;width:100%;height:100%;cursor:zoom-in}
+.cert__media img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+.cert-grid > li:hover .cert__media img{transform:scale(1.02)}
+.cert__badge{
+  position:absolute;top:10px;left:10px;
+  padding:3px 8px;
+  background:var(--accent);color:var(--accent-ink);
+  font-family:var(--font-mono);
+  font-size:9px;font-weight:500;letter-spacing:.10em;text-transform:uppercase;
+  border-radius:2px;
+  z-index:2;
+}
+.cert__body{
+  padding:18px 20px 20px;
+  display:flex;flex-direction:column;gap:5px;
+  flex:1;
+}
+.cert__index{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;
+  color:var(--ink-3);
+}
+.cert__title{
+  font-family:var(--font-display);
+  font-size:1.05rem;font-weight:400;
+  line-height:1.3;
+  letter-spacing:-.005em;
+  margin-top:2px;
+}
+.cert__meta{
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.03em;
+  color:var(--ink-3);
+  line-height:1.55;
+  margin-top:2px;
+}
+.cert__desc{
+  font-size:12.5px;
+  line-height:1.55;
+  color:var(--ink-2);
+  margin-top:5px;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.cert__actions{
+  margin-top:auto;
+  padding-top:16px;
+  display:flex;gap:18px;
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+}
+.cert__actions a{
+  border-bottom:1px solid transparent;
+  padding-bottom:2px;
+  transition:color var(--t),border-color var(--t);
+}
+.cert__actions a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.cert__actions span{color:var(--ink-4);cursor:default}
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+.exp-ledger{list-style:none;border-top:1px solid var(--ink)}
+.exp-item{
+  display:grid;grid-template-columns:1fr;gap:16px;
+  padding:28px 0;
+  border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+@media(min-width:720px){.exp-item{grid-template-columns:170px 1fr;gap:36px}}
+.exp-item__period{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.07em;
+  color:var(--ink-3);
+  padding-top:3px;
+  line-height:1.5;
+}
+.exp-item__period strong{
+  display:block;font-weight:500;color:var(--ink);
+  font-size:12.5px;letter-spacing:.03em;
+  margin-bottom:2px;
+}
+.exp-item__role{
+  font-family:var(--font-display);
+  font-size:1.25rem;font-weight:400;
+  letter-spacing:-.005em;line-height:1.3;
+  margin-bottom:3px;
+}
+.exp-item__current{
+  display:inline-block;
+  margin-left:10px;
+  padding:2px 7px;
+  font-family:var(--font-mono);
+  font-size:9px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:2px;
+  vertical-align:middle;
+  font-weight:500;
+  transform:translateY(-2px);
+}
+.exp-item__place{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.03em;
+  color:var(--accent);
+  margin-bottom:14px;
+}
+.exp-item__notes{list-style:none;display:grid;gap:7px}
+.exp-item__notes li{
+  position:relative;
+  padding-left:20px;
+  font-size:14.5px;line-height:1.65;
+  color:var(--ink-2);
+}
+.exp-item__notes li::before{
+  content:'—';
+  position:absolute;left:0;top:0;
+  color:var(--ink-4);
+  font-family:var(--font-mono);
+  font-size:12px;
+}
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+.project{
+  border-top:1px solid var(--ink);
+  padding:32px 0 44px;
+  display:grid;grid-template-columns:1fr;gap:26px;
+}
+.project:last-of-type{border-bottom:1px solid var(--ink)}
+
+.project__head{display:grid;grid-template-columns:1fr;gap:10px}
+.project__title-row{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;
+}
+.project__num{
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.10em;
+  color:var(--accent);
+  display:block;margin-bottom:8px;
+}
+.project__title{
+  font-family:var(--font-display);
+  font-size:clamp(1.4rem,2.6vw,1.9rem);
+  font-weight:400;letter-spacing:-.015em;
+  line-height:1.15;
+}
+.project__tag{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);
+  border:1px solid var(--rule);
+  padding:3px 9px;
+  border-radius:2px;
+}
+.project__meta{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.02em;
+  color:var(--ink-3);line-height:1.7;
+}
+.project__meta strong{color:var(--ink);font-weight:500}
+.project__meta a{color:var(--accent);border-bottom:1px solid var(--accent)}
+
+.project__shots{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  overflow:hidden;
+  min-height:220px;
+}
+.project__shots--single{grid-template-columns:1fr}
+.project__shots img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+.project:hover .project__shots img{transform:scale(1.02)}
+
+.project__body{display:grid;gap:22px}
+.project__desc{
+  font-size:15px;line-height:1.7;color:var(--ink-2);
+  max-width:68ch;
+}
+.project__stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.project__stat{
+  padding:16px 0;
+  border-right:1px solid var(--rule);
+}
+.project__stat:last-child{border-right:none}
+.project__stat:not(:first-child){padding-left:18px}
+.project__stat:first-child{padding-left:0}
+.project__stat strong{
+  display:block;
+  font-family:var(--font-display);
+  font-size:1.35rem;font-weight:400;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  line-height:1;
+  margin-bottom:3px;
+}
+.project__stat span{
+  font-family:var(--font-mono);
+  font-size:9.5px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.project__cols{
+  display:grid;grid-template-columns:1fr;gap:28px;
+}
+@media(min-width:640px){.project__cols{grid-template-columns:1fr 1fr}}
+.project__col h4{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);
+  margin-bottom:10px;
+  padding-bottom:9px;
+  border-bottom:1px solid var(--rule);
+}
+.project__col ul{list-style:none;display:grid;gap:5px}
+.project__col li{
+  font-size:14px;line-height:1.6;color:var(--ink-2);
+  position:relative;padding-left:16px;
+}
+.project__col li::before{
+  content:'·';position:absolute;left:0;top:0;
+  color:var(--accent);font-weight:700;
+}
+.project__tags{
+  display:flex;flex-wrap:wrap;
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.02em;
+  color:var(--ink-2);
+}
+.project__tags span{padding:2px 0}
+.project__tags .sep{color:var(--ink-4);margin:0 9px}
+.project__links{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+.edu-list{list-style:none;border-top:1px solid var(--ink)}
+.edu-item{
+  display:grid;grid-template-columns:1fr;gap:10px;
+  padding:26px 0;
+  border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+@media(min-width:720px){.edu-item{grid-template-columns:170px 1fr;gap:36px}}
+.edu-item__period{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.07em;
+  color:var(--ink-3);
+}
+.edu-item__degree{
+  font-family:var(--font-display);
+  font-size:1.25rem;font-weight:400;
+  letter-spacing:-.005em;line-height:1.3;
+  margin-bottom:3px;
+}
+.edu-item__badge{
+  display:inline-block;
+  margin-left:10px;
+  padding:2px 7px;
+  font-family:var(--font-mono);
+  font-size:9px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:var(--accent);
+  border:1px solid var(--accent);
+  border-radius:2px;
+  vertical-align:middle;
+  font-weight:500;
+  transform:translateY(-2px);
+}
+.edu-item__school{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.03em;
+  color:var(--accent);
+  margin-bottom:10px;
+}
+.edu-item__notes{list-style:none;display:grid;gap:3px}
+.edu-item__notes li{
+  font-size:14px;color:var(--ink-2);
+  position:relative;padding-left:16px;
+}
+.edu-item__notes li::before{
+  content:'—';position:absolute;left:0;top:0;
+  color:var(--ink-4);font-family:var(--font-mono);font-size:12px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{
+  display:block;
+  max-width: 62ch;
+}
+
+.contact__intro h3{
+  font-family:var(--font-display);
+  font-size:clamp(1.7rem,3.2vw,2.4rem);
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+.contact__intro h3 em{color:var(--accent)}
+.contact__intro p{
+  font-size:15.5px;line-height:1.7;color:var(--ink-2);
+  max-width:44ch;
+  margin-bottom:28px;
+}
+.contact__details{
+  list-style:none;display:grid;gap:0;
+  border-top:1px solid var(--ink);
+}
+.contact__details li{
+  display:grid;grid-template-columns:76px 1fr;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--rule);
+  font-size:13.5px;
+  align-items:baseline;
+}
+.contact__details-label{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.contact__details a{
+  color:var(--ink);border-bottom:1px solid var(--rule);
+  transition:border-color var(--t),color var(--t);
+  word-break:break-word;
+}
+.contact__details a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  padding:32px 0 36px;
+  border-top:1px solid var(--rule);
+  background:var(--paper);
+}
+.footer__inner{
+  display:grid;grid-template-columns:1fr;gap:10px;
+  font-family:var(--font-mono);
+  font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+@media(min-width:720px){
+  .footer__inner{grid-template-columns:1fr auto 1fr}
+  .footer__inner > :nth-child(2){text-align:center}
+  .footer__inner > :nth-child(3){text-align:right}
+}
+.footer__brand{color:var(--ink)}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+.modal{
+  position:fixed;inset:0;z-index:200;display:none;
+  align-items:center;justify-content:center;padding:20px;
+}
+.modal.is-open{display:flex}
+.modal__overlay{
+  position:absolute;inset:0;
+  background:rgba(20,18,16,.82);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  cursor:pointer;
+}
+.modal__dialog{
+  position:relative;width:100%;max-width:1040px;height:min(92vh,880px);
+  display:flex;flex-direction:column;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:var(--r-md);
+  box-shadow:0 24px 60px -20px rgba(0,0,0,.4);
+  overflow:hidden;
+}
+.modal__header{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px 18px;
+  border-bottom:1px solid var(--rule);
+  flex-shrink:0;
+}
+.modal__title{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink);
+  line-height:1.4;margin:0;
+}
+.modal__actions{display:flex;gap:16px;align-items:center;flex-shrink:0}
+.modal__open,.modal__close{
+  font-family:var(--font-mono);
+  font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+  padding:5px 0;
+  border-bottom:1px solid transparent;
+  transition:color var(--t),border-color var(--t);
+}
+.modal__open{color:var(--ink-2)}
+.modal__open:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.modal__close{color:var(--accent)}
+.modal__close:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.modal__body{flex:1;background:var(--paper-2);position:relative;overflow:hidden}
+.modal__image{
+  width:100%;height:100%;object-fit:contain;
+  background:var(--paper-2);
+  transition:opacity .2s ease;
+}
+.modal__image[hidden]{display:none!important}
+body.modal-open{overflow:hidden}
+
+.modal__status{
+  position:absolute;inset:0;
+  display:grid;place-items:center;padding:24px;
+  background:var(--paper-2);
+  text-align:center;overflow-y:auto;
+}
+.modal__status[hidden]{display:none}
+.modal__status-card{
+  max-width:480px;display:grid;gap:12px;justify-items:center;
+  background:var(--paper);
+  border:1px solid var(--rule);
+  border-radius:var(--r);
+  padding:26px 22px;
+}
+.modal__status-card h4{
+  font-family:var(--font-display);
+  font-size:1.1rem;font-weight:400;letter-spacing:-.005em;
+}
+.modal__status-card p{
+  font-size:13.5px;color:var(--ink-2);line-height:1.6;
+  word-break:break-word;
+}
+.modal__status-card code{
+  font-family:var(--font-mono);font-size:11.5px;
+  background:var(--paper-2);padding:2px 6px;color:var(--ink);border-radius:2px;
+}
+.modal__status-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.modal__spinner{
+  width:24px;height:24px;border-radius:50%;
+  border:2px solid var(--rule-strong);
+  border-top-color:var(--accent);
+  animation:spin .8s linear infinite;
+}
+.modal__spinner[hidden]{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:640px){
+  .modal{padding:0}
+  .modal__dialog{max-width:none;height:100vh;border:none;border-radius:0}
+  .modal__actions{gap:12px}
+  .modal__status-card{padding:20px 16px}
+}
+
+/* =========================================================
+   ACCESSIBILITY & MOTION
+   ========================================================= */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  padding:12px 18px;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  z-index:999;
+}
+.skip-link:focus{left:0}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    transition-duration:.001ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
+.hero__name,.hero__role,.hero__cta,.portrait{
+  animation:rise .6s cubic-bezier(.22,1,.36,1) backwards;
+}
+.hero__name{animation-delay:.04s}
+.hero__role{animation-delay:.12s}
+.hero__cta{animation-delay:.20s}
+.portrait{animation-delay:.16s}
+@keyframes rise{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#home">Skip to content</a>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="#home" class="topbar__brand">
+      <img src="https://cdn.postimage.me/2026/10/13/image4e8579b946978c55.png" alt="Marie Joy De Guzman" class="topbar__logo" />
+      <span class="topbar__name">Marie Joy De Guzman</span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#certificates">Certificates</a></li>
+        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#education">Education</a></li>
+        <li><a class="nav__link nav__link--cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="topbar__actions">
+      <button class="topbar__toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="topbar__toggle-night">Dark</span>
+        <span class="topbar__toggle-day">Light</span>
+      </button>
+      <button class="topbar__menu" id="menuToggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+
+    <div class="hero__meta">
+      <span>Portfolio · 2026-2027</span>
+      <span class="hero__meta-sep">/</span>
+      <span>Cauayan City, Philippines</span>
+      <span class="hero__meta-sep">/</span>
+      <span class="hero__status"><span class="hero__status-dot"></span>Open for Work</span>
+    </div>
+
+    <div class="hero__grid">
+      <div class="hero__text">
+        <h1 class="hero__name">Marie Joy<br><em>De Guzman.</em></h1>
+        <p class="hero__role">Information Technology Professional</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary"
+             href="resume/Majoy Resume.docx"
+             download="Majoy Resume.docx"
+             type="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            Download Resume
+          </a>
+          <a class="link-arrow" href="#projects">
+            View selected work <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <div class="portrait__frame">
+          <img src="https://cdn.postimage.me/2026/10/13/image4e8579b946978c55.png"
+               alt="Marie Joy De Guzman"
+               onerror="this.onerror=null;this.src='https://placehold.co/480x600/ebe5d8/141210?text=MJDG';" />
+        </div>
+        <figcaption class="portrait__caption">Fig. 01 — MJDG, Cauayan City · 2027</figcaption>
+      </figure>
+    </div>
+
+    <div class="hero__strip">
+      <div>
+        <p class="hero__strip-label">Email</p>
+        <p class="hero__strip-value">
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mariejoy.w.deguzman@isu.edu.ph"
+             target="_blank" rel="noopener">mariejoy.w.deguzman@isu.edu.ph</a>
+        </p>
+      </div>
+      <div>
+        <p class="hero__strip-label">Telephone</p>
+        <p class="hero__strip-value"><a href="tel:+639127118331">+63 912 711 8331</a></p>
+      </div>
+      <div>
+        <p class="hero__strip-label">Education</p>
+        <p class="hero__strip-value">BSIT · Isabela State University</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">01</span>
+      <span class="section__name">About</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">Career <em>objective.</em></h2>
+
+    <div class="about">
+      <div class="about__prose">
+        <p>
+          <strong>Information Technology graduate seeking a full-time role</strong>
+          where I can apply my foundation in network administration, systems
+          support, and cybersecurity to keep organizational infrastructure
+          secure, documented, and reliable.
+        </p>
+        <p>
+          I am looking for a position that lets me grow into a Network Security
+          Specialist or Network Administrator — configuring and hardening
+          networks, analyzing traffic at the packet level, and troubleshooting
+          methodically. I value clear documentation, careful detail, and a team
+          that treats reliability as a standard rather than an afterthought.
+        </p>
+        <div class="about__socials">
+          <a href="https://github.com/Majoy12965" class="link-arrow" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.facebook.com/mariejoy.deguzman.393" class="link-arrow" target="_blank" rel="noopener">Facebook <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <aside class="facts">
+        <div class="facts__row">
+          <span class="facts__label">Status</span>
+          <span class="facts__value"><strong>Open for Work</strong> · Full-time</span>
+        </div>
+        <div class="facts__row">
+          <span class="facts__label">Based</span>
+          <span class="facts__value">Cauayan City, Isabela, PH</span>
+        </div>
+        <div class="facts__row">
+          <span class="facts__label">Education</span>
+          <span class="facts__value">BSIT · Isabela State University</span>
+        </div>
+        <div class="facts__row">
+          <span class="facts__label">Graduated</span>
+          <span class="facts__value">2027</span>
+        </div>
+        <div class="facts__row">
+          <span class="facts__label">Focus</span>
+          <span class="facts__value">NETWORKING SECURITY</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">02</span>
+      <span class="section__name">SKILLS</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">TECHNICAL AND <em>PROFESSIONAL</em></h2>
+
+    <div class="skills">
+      <div>
+        <div class="skills__col-head">
+          <h3 class="skills__col-title">Technical</h3>
+          <span class="skills__col-count">08 / entries</span>
+        </div>
+        <ul class="ledger-list">
+          <li><span>Cisco Routing &amp; Switching</span><span class="leader"></span><span class="num">85</span></li>
+          <li><span>TCP/IP &amp; Subnetting</span><span class="leader"></span><span class="num">85</span></li>
+          <li><span>VLANs &amp; Inter-VLAN Routing</span><span class="leader"></span><span class="num">80</span></li>
+          <li><span>Network Security</span><span class="leader"></span><span class="num">80</span></li>
+          <li><span>ACLs &amp; Firewall Rules</span><span class="leader"></span><span class="num">75</span></li>
+          <li><span>Wireshark / Packet Analysis</span><span class="leader"></span><span class="num">75</span></li>
+          <li><span>Linux</span><span class="leader"></span><span class="num">70</span></li>
+          <li><span>Python</span><span class="leader"></span><span class="num">65</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="skills__col-head">
+          <h3 class="skills__col-title">Professional</h3>
+          <span class="skills__col-count">05 / entries</span>
+        </div>
+        <ul class="ledger-list">
+          <li><span>Communication</span><span class="leader"></span><span class="num">95</span></li>
+          <li><span>Analytical Thinking</span><span class="leader"></span><span class="num">90</span></li>
+          <li><span>Teamwork</span><span class="leader"></span><span class="num">92</span></li>
+          <li><span>Problem Solving</span><span class="leader"></span><span class="num">90</span></li>
+          <li><span>Attention to Detail</span><span class="leader"></span><span class="num">88</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="section" id="certificates">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">03</span>
+      <span class="section__name">Credentials</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">Certificates &amp; <em>achievements.</em></h2>
+
+    <ul class="cert-grid">
+
+      <!-- 01 · Networking (Certiport) -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Certiport</span>
+            <a href="certificates/redacted_De Guzman Certificate-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_De Guzman Certificate-1.png"
+               data-cert-title="Networking — Certiport (Pearson VUE)"
+               aria-label="Preview Networking certificate">
+              <img src="certificates/redacted_De Guzman Certificate-1.png" alt="Networking" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">01</span>
+            <h3 class="cert__title">Networking</h3>
+            <p class="cert__meta">Pearson VUE · Certiport<br>Awarded Dec 2025 · Valid 5 years</p>
+            <p class="cert__desc">Core networking concepts — network access, IP connectivity, infrastructure, and security fundamentals.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_De Guzman Certificate-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_De Guzman Certificate-1.png"
+                 data-cert-title="Networking — Certiport (Pearson VUE)">View →</a>
+              <a href="https://verify.certiport.com/" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 02 · Introduction to IoT and Digital Transformation -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco</span>
+            <a href="certificates/redacted_IOT and Digital Transformation-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_IOT and Digital Transformation-1.png"
+               data-cert-title="Introduction to IoT and Digital Transformation — Cisco Networking Academy"
+               aria-label="Preview IoT and Digital Transformation certificate">
+              <img src="certificates/redacted_IOT and Digital Transformation-1.png" alt="Introduction to IoT and Digital Transformation" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">02</span>
+            <h3 class="cert__title">Introduction to IoT and Digital Transformation</h3>
+            <p class="cert__meta">Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Introduces IoT devices, connected systems, and how digital transformation shapes modern organizations.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_IOT and Digital Transformation-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_IOT and Digital Transformation-1.png"
+                 data-cert-title="Introduction to IoT and Digital Transformation — Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=csO9ysRM9bGXtv-NBPfIZIRE_Ima78Xz2TQTPlAZnRwWPxU7_MNkLgiT18Q6iVFRiBpDCrR2Y1_YrOvIIYIpSA%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 03 · Introduction to Cybersecurity -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco · DICT</span>
+            <a href="certificates/redacted_Introduction to Cybersecurity-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Introduction to Cybersecurity-1.png"
+               data-cert-title="Introduction to Cybersecurity — DICT-ITU DTC · Cisco Networking Academy"
+               aria-label="Preview Introduction to Cybersecurity certificate">
+              <img src="certificates/redacted_Introduction to Cybersecurity-1.png" alt="Introduction to Cybersecurity" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">03</span>
+            <h3 class="cert__title">Introduction to Cybersecurity</h3>
+            <p class="cert__meta">DICT–ITU DTC Initiative · Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Foundations of cybersecurity — common threats, vulnerabilities, and practices for protecting systems and data.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Introduction to Cybersecurity-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Introduction to Cybersecurity-1.png"
+                 data-cert-title="Introduction to Cybersecurity — DICT-ITU DTC · Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=q4BcaD_azbboQcWKM_bjIpBTx9EnAixKWWjQB26O-f22n_vDCBxJuDd-hLkkIDJwbgaaz_ZMhA221YteXiHOWA%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 04 · Network Defense -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco · DICT</span>
+            <a href="certificates/redacted_Network Defense-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Network Defense-1.png"
+               data-cert-title="Network Defense — DICT-ITU DTC · Cisco Networking Academy"
+               aria-label="Preview Network Defense certificate">
+              <img src="certificates/redacted_Network Defense-1.png" alt="Network Defense" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">04</span>
+            <h3 class="cert__title">Network Defense</h3>
+            <p class="cert__meta">DICT–ITU DTC Initiative · Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Monitoring, detecting, and responding to network threats using defense-in-depth principles.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Network Defense-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Network Defense-1.png"
+                 data-cert-title="Network Defense — DICT-ITU DTC · Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=AQNZPv-84-tAATe4_SWnkV6V8AKts1vV6Ok6zMMntDdFLGUmq9bNbXojZUbVgvKVHaBTDkX3vfxw5juKA_1ryQ%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 05 · Cyber Threat Management -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco · DICT</span>
+            <a href="certificates/redacted_Cyber Treat Management-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Cyber Treat Management-1.png"
+               data-cert-title="Cyber Threat Management — DICT-ITU DTC · Cisco Networking Academy"
+               aria-label="Preview Cyber Threat Management certificate">
+              <img src="certificates/redacted_Cyber Treat Management-1.png" alt="Cyber Threat Management" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">05</span>
+            <h3 class="cert__title">Cyber Threat Management</h3>
+            <p class="cert__meta">DICT–ITU DTC Initiative · Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Threat intelligence, risk management, and incident response for managing cyber threats.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Cyber Treat Management-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Cyber Treat Management-1.png"
+                 data-cert-title="Cyber Threat Management — DICT-ITU DTC · Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=ECFSAmLoHziJQSUE7njWtkCgWfjHyJiV1a8eERrajXmKluSsEHopVFSa-cUV--1K1c3Max4GWt5r5Qx01fZcUQ%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 06 · Networking Basics -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco</span>
+            <a href="certificates/redacted_Network Basics-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Network Basics-1.png"
+               data-cert-title="Networking Basics — Cisco Networking Academy"
+               aria-label="Preview Networking Basics certificate">
+              <img src="certificates/redacted_Network Basics-1.png" alt="Networking Basics" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">06</span>
+            <h3 class="cert__title">Networking Basics</h3>
+            <p class="cert__meta">Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Basic networking terminology, devices, protocols, and addressing concepts.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Network Basics-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Network Basics-1.png"
+                 data-cert-title="Networking Basics — Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=YLxXrfA3AB_S4wzlBJtzit6UtWh03yhoxhirToEyANVNj6HK2AcGE3Mk73mS4MlX5o-_YgyFYJ8BfrL9kLe1dA%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 07 · Networking Devices and Initial Configuration -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">Cisco · DICT</span>
+            <a href="certificates/redacted_Network Devices and Initial Configuration-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Network Devices and Initial Configuration-1.png"
+               data-cert-title="Networking Devices and Initial Configuration — DICT-ITU DTC · Cisco Networking Academy"
+               aria-label="Preview Networking Devices and Initial Configuration certificate">
+              <img src="certificates/redacted_Network Devices and Initial Configuration-1.png" alt="Networking Devices" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">07</span>
+            <h3 class="cert__title">Networking Devices and Initial Configuration</h3>
+            <p class="cert__meta">DICT–ITU DTC Initiative · Cisco Networking Academy<br>Course completion</p>
+            <p class="cert__desc">Configuring routers and switches, initial device setup, and basic troubleshooting.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Network Devices and Initial Configuration-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Network Devices and Initial Configuration-1.png"
+                 data-cert-title="Networking Devices and Initial Configuration — DICT-ITU DTC · Cisco Networking Academy">View →</a>
+              <a href="https://www.credly.com/users/registrations/sso?social=google&token=wvc5rAgxskVpRDmGOjzTFSh3GPg_wdmjYMbZUzYAb0gbcaLnoRsJF2HHzEnLHCS7PCOHKX7WRQqopI6wRnG0DA%3D%3D" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 08 · Microsoft Cybersecurity (TESDA) -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">TESDA</span>
+            <a href="certificates/MS_CYBERSECURITY-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/MS_CYBERSECURITY-1.png"
+               data-cert-title="Microsoft Cybersecurity: Security, Compliance & Identity Fundamentals — TESDA"
+               aria-label="Preview TESDA Microsoft Cybersecurity certificate">
+              <img src="certificates/MS_CYBERSECURITY-1.png" alt="Microsoft Cybersecurity" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">08</span>
+            <h3 class="cert__title">Microsoft Cybersecurity: Security, Compliance &amp; Identity Fundamentals</h3>
+            <p class="cert__meta">TESDA Online Program<br>Completed Aug 2026</p>
+            <p class="cert__desc">Security, compliance, and identity concepts in Microsoft cloud and cybersecurity environments.</p>
+            <div class="cert__actions">
+              <a href="certificates/MS_CYBERSECURITY-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/MS_CYBERSECURITY-1.png"
+                 data-cert-title="Microsoft Cybersecurity: Security, Compliance & Identity Fundamentals — TESDA">View →</a>
+              <a href="mailto:tesdaonlineprogram@tesda.gov.ph" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 09 · AI Security Summit 2026 (CSA) -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">CSA</span>
+            <a href="certificates/redacted_Marie_Joy_De_Guzman_mariejoydeguzman15gmail.com_Certificate-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_Marie_Joy_De_Guzman_mariejoydeguzman15gmail.com_Certificate-1.png"
+               data-cert-title="AI Security Summit 2026: CxO Trust — Cloud Security Alliance"
+               aria-label="Preview Cloud Security Alliance certificate">
+              <img src="certificates/redacted_Marie_Joy_De_Guzman_mariejoydeguzman15gmail.com_Certificate-1.png" alt="AI Security Summit 2026" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">09</span>
+            <h3 class="cert__title">AI Security Summit 2026: CxO Trust</h3>
+            <p class="cert__meta">Cloud Security Alliance<br>Aug 2026 · Online</p>
+            <p class="cert__desc">Virtual summit on AI security, trust, governance, and executive-level risk considerations.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_Marie_Joy_De_Guzman_mariejoydeguzman15gmail.com_Certificate-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_Marie_Joy_De_Guzman_mariejoydeguzman15gmail.com_Certificate-1.png"
+                 data-cert-title="AI Security Summit 2026: CxO Trust — Cloud Security Alliance">View →</a>
+              <a href="https://cloudsecurityalliance.org/" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 10 · SPUP OU Cyber Security -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <span class="cert__badge">OpenLearning</span>
+            <a href="certificates/redacted_SPUP OU CyberSecurity-1.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/redacted_SPUP OU CyberSecurity-1.png"
+               data-cert-title="SPUP OU Cyber Security — St. Paul University Philippines · OpenLearning"
+               aria-label="Preview SPUP OU Cyber Security certificate">
+              <img src="certificates/redacted_SPUP OU CyberSecurity-1.png" alt="SPUP OU Cyber Security" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">10</span>
+            <h3 class="cert__title">SPUP OU Cyber Security</h3>
+            <p class="cert__meta">OpenLearning · St. Paul University Philippines<br>Issued Oct 2026</p>
+            <p class="cert__desc">Online cybersecurity course delivered through the OpenLearning platform.</p>
+            <div class="cert__actions">
+              <a href="certificates/redacted_SPUP OU CyberSecurity-1.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/redacted_SPUP OU CyberSecurity-1.png"
+                 data-cert-title="SPUP OU Cyber Security — St. Paul University Philippines · OpenLearning">View →</a>
+              <a href="https://www.openlearning.com/" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+      <!-- 11 · GICAST -->
+      <li>
+        <article class="cert">
+          <div class="cert__media">
+            <a href="certificates/gicast.png"
+               class="cert-preview-trigger"
+               data-cert-src="certificates/gicast.png"
+               data-cert-title="GICAST — Cyber Aptitude & Skills Training (The Open University)">
+              <span class="cert__badge">Open University</span>
+              <img src="certificates/gicast.png" alt="GICAST certificate" />
+            </a>
+          </div>
+          <div class="cert__body">
+            <span class="cert__index">11</span>
+            <h3 class="cert__title">GICAST — Cyber Aptitude &amp; Skills Training</h3>
+            <p class="cert__meta">The Open University<br>May 2025</p>
+            <p class="cert__desc">Gamified cyber aptitude and skills training covering foundational cybersecurity competencies.</p>
+            <div class="cert__actions">
+              <a href="certificates/gicast.png" class="cert-preview-trigger"
+                 data-cert-src="certificates/gicast.png"
+                 data-cert-title="GICAST — Cyber Aptitude & Skills Training (The Open University)">View →</a>
+              <a href="https://www.open.edu/openlearn/digital-computing/gamified-intelligent-cyber-aptitude-and-skills-training-gicast/content-section-overview" target="_blank" rel="noopener">Verify ↗</a>
+            </div>
+          </div>
+        </article>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section section--alt" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">04</span>
+      <span class="section__name">Experience</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">Where I've <em>worked.</em></h2>
+    <p class="section__lead">A short ledger of work experience — current part-time role and a completed government internship.</p>
+
+    <ul class="exp-ledger">
+
+      <li class="exp-item">
+        <div class="exp-item__period">
+          <strong>2026 — Present</strong>
+          Part-time · Retail
+        </div>
+        <div>
+          <h3 class="exp-item__role">Promodiser <span class="exp-item__current">Current</span></h3>
+          <p class="exp-item__place">Retail Partner Store — Cauayan City, Isabela</p>
+          <ul class="exp-item__notes">
+            <li>Promoted and merchandised client products at partner retail locations, focusing on product visibility and shelf presence.</li>
+            <li>Assisted customers with product information, comparisons, and purchase recommendations.</li>
+            <li>Maintained planogram compliance, product displays, and general stock condition.</li>
+            <li>Reported daily sales activity and inventory notes to the merchandising supervisor.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item">
+        <div class="exp-item__period">
+          <strong>2023</strong>
+          Internship · OJT
+        </div>
+        <div>
+          <h3 class="exp-item__role">Staff Intern</h3>
+          <p class="exp-item__place">PDAO Office — Cauayan City, Isabela</p>
+          <ul class="exp-item__notes">
+            <li>Assisted persons with disabilities (PWDs) in filling out forms and completing required documents.</li>
+            <li>Guided clients through the steps of PWD ID registration and other assistance programs.</li>
+            <li>Organized and maintained client records, and handled clerical tasks for the office.</li>
+            <li>Developed patience, clear communication, and attention to detail while serving diverse clients.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">05</span>
+      <span class="section__name">Portfolio</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">Selected <em>work.</em></h2>
+
+    <article class="project">
+      <div class="project__head">
+        <span class="project__num">— 01 / Web</span>
+        <div class="project__title-row">
+          <h3 class="project__title">PDAOLink</h3>
+          <span class="project__tag">In Development</span>
+        </div>
+        <p class="project__meta">
+          <strong>Role</strong> Developer &nbsp;·&nbsp;
+          <strong>Status</strong> In Development &nbsp;·&nbsp;
+          <strong>Link</strong> <a href="https://pdaolink.onrender.com/" target="_blank" rel="noopener">pdaolink.onrender.com</a>
+        </p>
+      </div>
+
+      <div class="project__shots">
+        <img src="project/pdaolink-1.png" alt="PDAOLink interface 1"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x600/22201c/f5f1e8?text=PDAOLink+01';" />
+        <img src="project/pdaolink-2.png" alt="PDAOLink interface 2"
+             onerror="this.onerror=null;this.src='https://placehold.co/800x600/22201c/f5f1e8?text=PDAOLink+02';" />
+      </div>
+
+      <div class="project__body">
+        <p class="project__desc">
+          An automated registration platform for Persons with Disability
+          Affairs Office (PDAO) applicants in Cauayan City. The goal is to
+          digitize and speed up the process of applying for PWD IDs and
+          required documents.
+        </p>
+
+        <div class="project__stats">
+          <div class="project__stat"><strong>Active</strong><span>Development</span></div>
+          <div class="project__stat"><strong>Web</strong><span>Platform</span></div>
+          <div class="project__stat"><strong>100%</strong><span>Paperless Goal</span></div>
+        </div>
+
+        <div class="project__cols">
+          <div class="project__col">
+            <h4>The goal</h4>
+            <ul>
+              <li>Simplify registration for PWD applicants</li>
+              <li>Reduce manual paperwork and processing time</li>
+              <li>Create a centralized PDAO records database</li>
+            </ul>
+          </div>
+          <div class="project__col">
+            <h4>Current progress</h4>
+            <ul>
+              <li>UI/UX wireframing and frontend development</li>
+              <li>Setting up the user registration flow</li>
+              <li>Deploying the live prototype on Render</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project__tags">
+          <span>Web Development</span><span class="sep">·</span>
+          <span>Database Design</span><span class="sep">·</span>
+          <span>Cloud Deployment</span><span class="sep">·</span>
+          <span>UI/UX</span>
+        </div>
+
+        <div class="project__links">
+          <a href="https://pdaolink.onrender.com/" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+            Visit live site <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section section--alt" id="education">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">06</span>
+      <span class="section__name">Education</span>
+      <span class="section__line"></span>
+    </div>
+    <h2 class="section__title">Where I've <em>studied.</em></h2>
+
+    <ul class="edu-list">
+      <li class="edu-item">
+        <div class="edu-item__period">2023 — 2027</div>
+        <div>
+          <h3 class="edu-item__degree">BS Information Technology <span class="edu-item__badge">Graduated</span></h3>
+          <p class="edu-item__school">Isabela State University — Cauayan Campus</p>
+        </div>
+      </li>
+      <li class="edu-item">
+        <div class="edu-item__period">2022 — 2023</div>
+        <div>
+          <h3 class="edu-item__degree">Senior High School — ICT Strand</h3>
+          <p class="edu-item__school">Cauayan City Science and Technology High School</p>
+          <ul class="edu-item__notes">
+            <li>Graduated with High Honors</li>
+            <li>Best in Research</li>
+          </ul>
+        </div>
+      </li>
+      <li class="edu-item">
+        <div class="edu-item__period">— 2017</div>
+        <div>
+          <h3 class="edu-item__degree">Elementary Education</h3>
+          <p class="edu-item__school">Union Elementary School</p>
+          <ul class="edu-item__notes">
+            <li>Graduated with Honors</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__num">07</span>
+      <span class="section__name">Contact</span>
+      <span class="section__line"></span>
+    </div>
+
+    <div class="contact">
+      <div class="contact__intro">
+        <h3>Have a brief, a role,<br>or just a <em>question?</em></h3>
+        <p>Open to full-time roles, OJT, and freelance work. The quickest way to reach me is email — I usually reply within a day.</p>
+
+        <ul class="contact__details">
+          <li>
+            <span class="contact__details-label">Email</span>
+            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mariejoy.w.deguzman@isu.edu.ph&amp;su=Inquiry%20from%20Portfolio"
+               target="_blank" rel="noopener">mariejoy.w.deguzman@isu.edu.ph</a>
+          </li>
+          <li>
+            <span class="contact__details-label">Phone</span>
+            <a href="tel:+639127118331">+63 912 711 8331</a>
+          </li>
+          <li>
+            <span class="contact__details-label">GitHub</span>
+            <a href="https://github.com/Majoy12965" target="_blank" rel="noopener">github.com/Majoy12965</a>
+          </li>
+        </ul>
+
+        <div style="margin-top:28px">
+          <a class="btn btn--primary"
+             href="resume/Majoy Resume.docx"
+             download="Majoy Resume.docx"
+             type="application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <p class="footer__brand">© Marie Joy De Guzman · <span id="year"></span></p>
+      <p>Cauayan City · PH</p>
+      <p>Hand-coded — HTML · CSS · JS</p>
+    </div>
+  </div>
+</footer>
+
+<!-- CERT PREVIEW MODAL -->
+<div class="modal" id="certModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="certModalTitle">
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog">
+    <div class="modal__header">
+      <h3 class="modal__title" id="certModalTitle">Certificate</h3>
+      <div class="modal__actions">
+        <a class="modal__open" id="certModalOpen" href="#" target="_blank" rel="noopener">Open ↗</a>
+        <button class="modal__close" id="certModalClose" type="button">Close ✕</button>
+      </div>
+    </div>
+    <div class="modal__body">
+      <img id="certModalImage" class="modal__image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Certificate preview" hidden />
+      <div class="modal__status" id="certModalStatus" hidden>
+        <div class="modal__status-card">
+          <span class="modal__spinner" id="certStatusSpinner" hidden></span>
+          <h4 id="certStatusTitle">Preview unavailable</h4>
+          <p id="certStatusText"></p>
+          <div class="modal__status-actions">
+            <a class="btn btn--primary btn--sm" id="certStatusOpen" href="#" target="_blank" rel="noopener">Open file</a>
+            <a class="btn btn--ghost btn--sm" id="certStatusDownload" href="#" download>Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  /* THEME */
+  const html = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  html.setAttribute('data-theme', stored || (prefersDark ? 'dark' : 'light'));
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  /* YEAR */
+  const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+  /* =========================================================
+     NAVIGATION — mobile menu + scroll spy
+     ========================================================= */
+  const nav       = document.getElementById('primaryNav');
+  const menuBtn   = document.getElementById('menuToggle');
+  const navLinks  = Array.from(document.querySelectorAll('.nav__link'));
+
+  const closeNav = () => {
+    if (!nav || !menuBtn) return;
+    nav.classList.remove('is-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
+  };
+
+  menuBtn?.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) closeNav();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  /* Scroll spy */
+  const spySections = navLinks
+    .map(l => document.querySelector(l.getAttribute('href')))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && spySections.length) {
+    const setActive = (id) => {
+      navLinks.forEach(l => {
+        l.classList.toggle('is-active', l.getAttribute('href') === '#' + id);
+      });
+    };
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+    spySections.forEach(s => spy.observe(s));
+  }
+
+  /* =========================================================
+     CERTIFICATE MODAL — images only
+     ========================================================= */
+  const modal        = document.getElementById('certModal');
+  const modalImage   = document.getElementById('certModalImage');
+  const modalTitle   = document.getElementById('certModalTitle');
+  const modalOpen    = document.getElementById('certModalOpen');
+  const modalClose   = document.getElementById('certModalClose');
+  const modalStatus  = document.getElementById('certModalStatus');
+  const statusTitle  = document.getElementById('certStatusTitle');
+  const statusText   = document.getElementById('certStatusText');
+  const statusSpin   = document.getElementById('certStatusSpinner');
+  const statusOpen   = document.getElementById('certStatusOpen');
+  const statusDl     = document.getElementById('certStatusDownload');
+
+  const BLANK_PIXEL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+  const IMG_TIMEOUT = 9000;
+
+  let lastFocused = null;
+  let loadTimer = null;
+  let currentSrc = '';
+
+  const escapeHtml = (s) => String(s).replace(/[&<>"']/g, c =>
+    ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+
+  const showStatus = ({ title, html: h, spinner = false }) => {
+    statusTitle.textContent = title;
+    statusText.innerHTML = h;
+    statusSpin.hidden = !spinner;
+    modalStatus.hidden = false;
+    modalImage.classList.add('is-hidden');
+  };
+  const hideStatus = () => {
+    modalStatus.hidden = true;
+    statusSpin.hidden = true;
+    modalImage.classList.remove('is-hidden');
+  };
+  const stopTimer = () => { if (loadTimer) { clearTimeout(loadTimer); loadTimer = null; } };
+
+  const openCertModal = (src, title) => {
+    if (!modal) return;
+    lastFocused = document.activeElement;
+    currentSrc = src;
+    modalTitle.textContent = title || 'Certificate';
+    modalOpen.href = src;
+    statusOpen.href = src;
+    statusDl.href = src;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    modalClose?.focus();
+    
+    modalImage.hidden = false;
+    showStatus({ title: 'Loading preview…', h: 'Fetching the certificate image.', spinner: true });
+    modalImage.src = src;
+    stopTimer();
+    loadTimer = setTimeout(() => {
+      loadTimer = null;
+      if (!modal.classList.contains('is-open') || currentSrc !== src) return;
+      showStatus({
+        title: 'Preview unavailable',
+        h: `The image <code>${escapeHtml(src)}</code> took too long to load.`
+      });
+    }, IMG_TIMEOUT);
+  };
+
+  const closeCertModal = () => {
+    if (!modal) return;
+    stopTimer();
+    currentSrc = '';
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    hideStatus();
+    setTimeout(() => { modalImage.src = BLANK_PIXEL; }, 200);
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  };
+
+  modalImage?.addEventListener('load', () => {
+    if (!modal.classList.contains('is-open') || !currentSrc) return;
+    stopTimer(); hideStatus();
+  });
+  modalImage?.addEventListener('error', () => {
+    if (!modal.classList.contains('is-open')) return;
+    stopTimer();
+    showStatus({
+      title: 'Certificate image not found',
+      h: `The file <code>${escapeHtml(currentSrc)}</code> could not be loaded. Check the filename — paths are case-sensitive on most hosts.`
+    });
+  });
+
+  document.querySelectorAll('.cert-preview-trigger').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      const src = el.getAttribute('data-cert-src') || el.getAttribute('href');
+      const title = el.getAttribute('data-cert-title') || 'Certificate';
+      openCertModal(src, title);
+    });
+  });
+
+  modalClose?.addEventListener('click', closeCertModal);
+  modal?.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', closeCertModal));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('is-open')) closeCertModal();
+  });
+})();
+</script>
+</body>
+</html>
